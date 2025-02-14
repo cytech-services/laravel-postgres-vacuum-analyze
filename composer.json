@@ -1,6 +1,6 @@
 {
     "name": "cytech-services/laravel-postgres-vacuum-analyze",
-    "description": "A laravel package to vacuum and analyze tables in the public shema",
+    "description": "A laravel package to vacuum and analyze tables in specific schemas",
     "keywords": [
         "Cytech Services LLC",
         "laravel",
