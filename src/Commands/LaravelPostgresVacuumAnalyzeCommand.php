@@ -52,18 +52,17 @@ class LaravelPostgresVacuumAnalyzeCommand extends Command implements Isolatable
                     try {
                         // Check if there are the same tables in both include and exclude.
                         // Throw an exception if there are.
-                        if (!empty($tableConfig['include']) && !empty($tableConfig['exclude'])) {
+                        if (! empty($tableConfig['include']) && ! empty($tableConfig['exclude'])) {
                             $intersect = array_intersect($tableConfig['include'], $tableConfig['exclude']);
-                            if (!empty($intersect)) {
-                                throw new \Exception("The tables '" . implode("', '", $intersect) . "' are in both the include and exclude arrays.");
+                            if (! empty($intersect)) {
+                                throw new \Exception("The tables '".implode("', '", $intersect)."' are in both the include and exclude arrays.");
                             }
                         }
-
 
                         if (empty($tableConfig['include']) && empty($tableConfig['exclude'])) {
                             // Get all tables in the schema
                             $tables = $db->select('SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = ?', [$schema]);
-                        } elseif (!empty($tableConfig['include']) && !empty($tableConfig['exclude'])) {
+                        } elseif (! empty($tableConfig['include']) && ! empty($tableConfig['exclude'])) {
                             // Get all tables in the schema and filter by the included and excluded tables
                             $tables = $db->select('SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = ? AND tablename IN (?) AND tablename NOT IN (?)', [
                                 $schema,
@@ -133,8 +132,12 @@ class LaravelPostgresVacuumAnalyzeCommand extends Command implements Isolatable
 
         // Finish all progress bars
         $connectionProgressBar->finish();
-        if (isset($schemaProgressBar)) $schemaProgressBar->finish();
-        if (isset($tableProgressBar)) $tableProgressBar->finish();
+        if (isset($schemaProgressBar)) {
+            $schemaProgressBar->finish();
+        }
+        if (isset($tableProgressBar)) {
+            $tableProgressBar->finish();
+        }
 
         // Check if there were any errors, display them and return a failure
         if (count($this->errors['connections']) > 0 || count($this->errors['tables']) > 0) {

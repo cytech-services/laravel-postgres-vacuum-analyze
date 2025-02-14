@@ -22,14 +22,14 @@ return [
                  * If no tables are specified, all tables will be included.
                  */
                 'include' => [
-                    // 
+                    //
                 ],
 
                 /**
                  * A array list of tables to exclude in the vacuum analyze command.
                  */
                 'exclude' => [
-                    // 
+                    //
                 ],
             ],
         ],
