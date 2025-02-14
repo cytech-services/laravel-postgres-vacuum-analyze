@@ -18,8 +18,6 @@ class LaravelPostgresVacuumAnalyzeServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-postgres-vacuum-analyze')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel_postgres_vacuum_analyze_table')
             ->hasCommand(LaravelPostgresVacuumAnalyzeCommand::class);
     }
 }
