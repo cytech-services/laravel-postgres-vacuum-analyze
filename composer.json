@@ -5,7 +5,11 @@
         "Cytech Services LLC",
         "Christopher Graham",
         "laravel",
-        "laravel-postgres-vacuum-analyze"
+        "laravel-postgres-vacuum-analyze",
+        "postgres",
+        "postgresql",
+        "database vacuum",
+        "database analyze"
     ],
     "homepage": "https://github.com/cytech-services/laravel-postgres-vacuum-analyze",
     "license": "MIT",
