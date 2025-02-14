@@ -2,9 +2,9 @@
 
 namespace CytechServices\LaravelPostgresVacuumAnalyze;
 
+use CytechServices\LaravelPostgresVacuumAnalyze\Commands\LaravelPostgresVacuumAnalyzeCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CytechServices\LaravelPostgresVacuumAnalyze\Commands\LaravelPostgresVacuumAnalyzeCommand;
 
 class LaravelPostgresVacuumAnalyzeServiceProvider extends PackageServiceProvider
 {
