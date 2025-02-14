@@ -57,6 +57,8 @@ class LaravelPostgresVacuumAnalyzeCommand extends Command implements Isolatable
                             }
                         }
 
+                        $tables = [];
+
                         if (empty($tableConfig['include']) && empty($tableConfig['exclude'])) {
                             // Get all tables in the schema
                             $tables = $db->select('SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = ?', [$schema]);
