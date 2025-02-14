@@ -2,9 +2,9 @@
 
 namespace CytechServices\LaravelPostgresVacuumAnalyze\Tests;
 
+use CytechServices\LaravelPostgresVacuumAnalyze\LaravelPostgresVacuumAnalyzeServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use CytechServices\LaravelPostgresVacuumAnalyze\LaravelPostgresVacuumAnalyzeServiceProvider;
 
 class TestCase extends Orchestra
 {
