@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace CytechServices\LaravelPostgresVacuumAnalyze\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelPostgresVacuumAnalyzeCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-postgres-vacuum-analyze';
 
     public $description = 'My command';
 
