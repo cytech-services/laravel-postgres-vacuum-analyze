@@ -22,8 +22,6 @@ class LaravelPostgresVacuumAnalyzeCommand extends Command implements Isolatable
     {
         $config = config('postgres-vacuum-analyze.connections');
 
-        // dump($config);
-
         // Create progress bar for the connection(s)
         $connectionProgressBar = $this->output->createProgressBar(count($config));
         $connectionProgressBar->setFormat("[%bar%] %current%/%max% - Connection: %message%\n");
